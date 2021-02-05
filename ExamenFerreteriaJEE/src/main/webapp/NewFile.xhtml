@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head> 
+<body> 
+
+
+	<div id="wrapper">
+
+		<div id="header">
+			<div id="headimg"></div>
+		</div>
+
+		<div id="iniciarSesion">
+
+			<div id="iniciarSesionTitulo">
+				<h1>Buscar Producto</h1>
+			</div>
+			<div id="iniciarSesionCuadro">
+				<h:form >
+					<p:growl showDetail="true" skipDetailIfEqualsSummary="true" />
+					<div >
+						<label for="txtcontrasena" id="col-md-12">Nombre: </label>
+						<h:inputText class="form__field2" value="#{productBean.producto.nombre}" />
+					</div>
+					<div >
+						<label for="txtcontrasena" id="col-md-12">Stock: </label>
+						<h:inputText class="form__field2" value="#{productBean.producto.stock}" />
+					</div>
+					<div >
+						<div >
+							<h:commandButton value="Buscar Cedula" class="btnBuscar"  type="submit" update="form" actionListener="#{productBean.leerProducto()}" />
+								
+						</div>
+					
+					</div>
+				</h:form>
+			</div>
+		</div>
+
+	</div>
+
+</body> 
+</html>
